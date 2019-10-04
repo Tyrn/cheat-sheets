@@ -1,0 +1,208 @@
+\documentclass[12pt,landscape]{article}
+\usepackage{multicol}
+\usepackage{ifthen}
+\usepackage[landscape]{geometry}
+\usepackage{hyperref}
+
+% Build a pdf online with:
+% http://latex.informatik.uni-halle.de/latex-online/latex.php?spw=2&id=626837_hRLskRF34GHL
+
+% To make this come out properly in landscape mode, do one of the following
+% 1.
+%  pdflatex latexsheet.tex
+%
+% 2.
+%  latex latexsheet.tex
+%  dvips -P pdf  -t landscape latexsheet.dvi
+%  ps2pdf latexsheet.ps
+
+% This sets page margins to .5 inch if using letter paper, and to 1cm
+% if using A4 paper. (This probably isn't strictly necessary.)
+% If using another size paper, use default 1cm margins.
+\ifthenelse{\lengthtest { \paperwidth = 11in}}
+	{ \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+	{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+	}
+
+% Turn off header and footer
+\pagestyle{empty}
+ 
+
+% Redefine section commands to use less space
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+\makeatother
+
+% Don't print section numbers
+\setcounter{secnumdepth}{0}
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0.5ex}
+
+
+% -----------------------------------------------------------------------
+
+\begin{document}
+
+\raggedright
+\footnotesize
+
+\begin{center}
+	\Huge{\textbf{Geany Cheat Sheet}} \\
+\end{center}
+\vspace*{0.5cm}
+
+\begin{multicols}{3}
+
+
+% multicol parameters
+% These lengths are set only within the two main columns
+%\setlength{\columnseprule}{0.25pt}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+
+%\begin{center}
+%     \Large{\textbf{Geany Cheat Sheet}} \\
+%\end{center}
+
+\section{Finding Text, Selecting Text}
+\begin{tabular}{@{}ll@{}}
+	\verb!Ctrl-F! & Find. \\
+	\verb!Ctrl-G! & Find Next. \\
+	\verb!Ctrl-Shift-G! & Find Previous. \\
+	\verb!Ctrl-Shift-F! & Find in files. \\
+	\verb!F7! & Switch to Search Bar. \\
+	\verb!Ctrl-Shift-E! & Find Usage. \\
+	\verb!Ctrl-Shift-D! & Find Document Usage. \\
+	\verb!Alt-Shift-W! & Select current word. \\
+	\verb!Alt-Shift-L! & Select current line(s). \\
+	\verb!Alt-Shift-P! & Select current paragraph. \\
+	\verb!Ctrl-A! & Select all. \\
+	\verb!Control+Shift! & Column mode editing. \\
+	\verb!Control+Alt! & Column mode editing. \\
+	\verb!Ctrl-Shift-M! & Mark all. \\
+	\verb!Ctrl-M! & Toggle marker. \\
+	\verb!Ctrl-,! & Go to previous marker. \\
+	\verb!Ctrl-.! & Go to next marker. \\
+\end{tabular}
+
+\section{Moving Around in the Document}
+\begin{tabular}{@{}ll@{}}
+	\verb!Home! / \verb!End! & Go to  \verb!Start! / \verb!End! of Line. \\
+	\verb!Alt-Home! & Go to Start of Display Line. \\
+	\verb!Alt-End! & Go to End of Display Line. \\
+	\verb!Alt-Up! & Scroll up by one line. \\
+	\verb!Alt-Down! & Scroll down by one line. \\
+	\verb!Ctrl-Shift-L! & Scroll to current line. \\
+	\verb!Ctrl-L! & Go to line. \\
+	\verb!Ctrl-B! & Go to matching brace. \\
+	\verb!Ctrl-M! & Toggle marker. \\
+	\verb!Ctrl-,! & Go to previous marker. \\
+	\verb!Ctrl-.! & Go to next marker. \\
+	\verb!Ctrl-/! & Go to Previous Word Part. \\
+	\verb!Ctrl-\! & Go to Next Word Part. \\
+	\verb!Alt-Right! & Navigate forward a location. \\
+	\verb!Alt-Left! & Navigate back a location. \\
+\end{tabular}
+
+\section{Moving the Document}
+\begin{tabular}{@{}ll@{}}
+	\verb!Ctrl-Shift-PgDn! & Move document right. \\
+	\verb!Ctrl-Shift-PgUp! & Move document left. \\
+	\verb!Ctrl-PgDn! & Switch to right document. \\
+	\verb!Ctrl-PgUp! & Switch to left document. \\
+	\verb!Ctrl-+! & Zoom In. \\
+	\verb!Ctrl--! & Zoom Out. \\
+	\verb!Ctrl-0! & Zoom Reset. \\
+	\verb!F11! & Fullscreen. \\
+\end{tabular}
+
+\section{Cut \& Paste}
+\begin{tabular}{@{}ll@{}}
+	\verb!Ctrl-X! & Cut. \\
+	\verb!Ctrl-Shift-X! & Cut current line(s). \\
+	\verb!Ctrl-C! & Copy. \\
+	\verb!Ctrl-Shift-C! & Copy current line(s). \\
+	\verb!Ctrl-V! & Paste. \\
+	\verb!Ctrl-D! & Duplicate line or selection. \\
+	\verb!Ctrl-Shift-Del! & Delete to line end. \\
+	\verb!Ctrl-K! & Delete current line(s). \\
+\end{tabular}
+
+\section{Editing}
+\begin{tabular}{@{}ll@{}}
+	\verb!Shift-Alt-D! & Insert date. \\
+	\verb!Ctrl-E! & Toggle comment(s). \\
+	\verb!Ctrl-Alt-U! & Toggle case of selection. \\
+	\verb!Tab! & Word part completion. \\
+	\verb!Tab! & Complete snippet. \\
+	\verb!Ctrl-I! & Increase indent. \\
+	\verb!Ctrl-U! & Decrease indent. \\
+	\verb!Alt-PgUp! & Move line(s) up. \\
+	\verb!Alt-PgDn! & Move line(s) down. \\
+	\verb!Ctrl-Space! & Complete word. \\
+	\verb!Ctrl-Shift-T! & Go to tag declaration. \\
+	\verb!Ctrl-T! & Go to tag definition. \\
+	\verb!Ctrl-Z! & Undo. \\
+	\verb!Ctrl-Y! & Redo. \\
+	\verb!Ctrl-H! & Replace (dialog). \\
+	\verb!Ctrl-1(2,3)! & Send to custom command. \\
+	\verb!Ctrl-Shift-Space! & Show calltip. \\
+\end{tabular}
+
+\section{Files}
+\begin{tabular}{@{}ll@{}}
+	\verb!Ctrl-N! & Create a new file. \\
+	\verb!Ctrl-O! & Open a file. \\
+	\verb!Ctrl-Shift-O! & Open selected file. \\
+	\verb!Ctrl-R! & Reload file. \\
+	\verb!Ctrl-Tab! & Switch to last used document. \\
+	\verb!Ctrl-S! & Save the current file. \\
+	\verb!Ctrl-Shift-S! & Save all open files. \\
+	\verb!Ctrl-W! & Close the current file. \\
+	\verb!Ctrl-Shift-W! & Close all files. \\
+	\verb!Ctrl-P! & Print the current file. \\
+	\verb!Ctrl-Q! & Quit Geany. \\
+\end{tabular}
+
+\section{Build, Make, \& Compile}
+\begin{tabular}{@{}ll@{}}
+	\verb!Ctrl-Alt-P! & Preferences. \\
+	\verb!F9! & Build. \\
+	\verb!Shift-F8! & Make object. \\
+	\verb!Shift-F9! & Make all. \\
+	\verb!F8! & Compile. \\
+	\verb!F5! & Run. \\
+	\verb!Ctrl-Return! & Show macro list. \\
+	\verb!Ctrl-Shift-F9! & Make custom target. \\
+	\verb!Ctrl-Shift-R! & Reload symbol list. \\
+\end{tabular}
+
+\section{Also}
+\begin{tabular}{@{}ll@{}}
+	\verb!F2! & Switch to Editor. \\
+	\verb!F4! & Switch to VTE. \\
+	\verb!F6! & Switch to Scribble. \\
+	\verb!F1! & Help. \\
+\end{tabular}
+
+Single page cheat sheet based on \url{https://wiki.geany.org/howtos/sorted_keyboard_shortcuts}
+
+\end{multicols}
+\end{document}
