@@ -8,7 +8,7 @@
 \footnotesize
 
 \begin{center}
-	\Huge{\textbf{Geany Cheat Sheet}} \\
+	\Huge{\textbf{Guillaume Quittet's Neovim Cheat Sheet}} \\
 \end{center}
 \vspace*{0.5cm}
 
@@ -23,132 +23,134 @@
 \setlength{\multicolsep}{1pt}
 \setlength{\columnsep}{2pt}
 
-%\begin{center}
-%     \Large{\textbf{Geany Cheat Sheet}} \\
-%\end{center}
-
-\section{Finding Text, Selecting Text}
+\section{Misc}
 \begin{tabular}{@{}ll@{}}
-	\verb!Ctrl-F! & Find. \\
-	\verb!Ctrl-G! & Find Next. \\
-	\verb!Ctrl-Shift-G! & Find Previous. \\
-	\verb!Ctrl-Shift-F! & Find in files. \\
-	\verb!F7! & Switch to Search Bar. \\
-	\verb!Ctrl-Shift-E! & Find Usage. \\
-	\verb!Ctrl-Shift-D! & Find Document Usage. \\
-	\verb!Alt-Shift-W! & Select current word. \\
-	\verb!Alt-Shift-L! & Select current line(s). \\
-	\verb!Alt-Shift-P! & Select current paragraph. \\
-	\verb!Ctrl-A! & Select all. \\
-	\verb!Control+Shift! & Column mode editing. \\
-	\verb!Control+Alt! & Column mode editing. \\
-	\verb!Ctrl-Shift-M! & Mark all. \\
-	\verb!Ctrl-M! & Toggle marker. \\
-	\verb!Ctrl-,! & Go to previous marker. \\
-	\verb!Ctrl-.! & Go to next marker. \\
+	\verb!W, :w! & Save. \\
+	\verb!Space+Tab! & Esc. \\
+    \verb!y(?)! & escape() \\
+	\verb!Ctrl+Space! & coc\#refresh()\\
+    \verb!Ctrl+y(?)! & pumvisible() \\
+    \verb!<leader>nh! & :nohl \\
+    \verb!F3! & :NumbersToggle \\
+    \verb!F4! & :NumbersOnOff \\
+    \verb!<leader>tb! & :TagbarToggle \\
+    \verb!<leader>ut! & :UndoTreeToggle \\
 \end{tabular}
 
-\section{Moving Around in the Document}
+\section{ALE}
 \begin{tabular}{@{}ll@{}}
-	\verb!Home! / \verb!End! & Go to  \verb!Start! / \verb!End! of Line. \\
-	\verb!Alt-Home! & Go to Start of Display Line. \\
-	\verb!Alt-End! & Go to End of Display Line. \\
-	\verb!Alt-Up! & Scroll up by one line. \\
-	\verb!Alt-Down! & Scroll down by one line. \\
-	\verb!Ctrl-Shift-L! & Scroll to current line. \\
-	\verb!Ctrl-L! & Go to line. \\
-	\verb!Ctrl-B! & Go to matching brace. \\
-	\verb!Ctrl-M! & Toggle marker. \\
-	\verb!Ctrl-,! & Go to previous marker. \\
-	\verb!Ctrl-.! & Go to next marker. \\
-	\verb!Ctrl-/! & Go to Previous Word Part. \\
-	\verb!Ctrl-\! & Go to Next Word Part. \\
-	\verb!Alt-Right! & Navigate forward a location. \\
-	\verb!Alt-Left! & Navigate back a location. \\
+	\verb!<leader>ak! & ale\_previous\_wrap \\
+	\verb!<leader>aj! & ale\_next\_wrap \\
 \end{tabular}
 
-\section{Moving the Document}
+\section{Buffer}
 \begin{tabular}{@{}ll@{}}
-	\verb!Ctrl-Shift-PgDn! & Move document right. \\
-	\verb!Ctrl-Shift-PgUp! & Move document left. \\
-	\verb!Ctrl-PgDn! & Switch to right document. \\
-	\verb!Ctrl-PgUp! & Switch to left document. \\
-	\verb!Ctrl-+! & Zoom In. \\
-	\verb!Ctrl--! & Zoom Out. \\
-	\verb!Ctrl-0! & Zoom Reset. \\
-	\verb!F11! & Fullscreen. \\
+	\verb!<leader>bn! & :bnext \\
+	\verb!<leader>bp! & :bprevious \\
+	\verb!<leader>bf! & :bfirst \\
+	\verb!<leader>bd! & :bdelete \\
 \end{tabular}
 
-\section{Cut \& Paste}
+\section{Coc}
 \begin{tabular}{@{}ll@{}}
-	\verb!Ctrl-X! & Cut. \\
-	\verb!Ctrl-Shift-X! & Cut current line(s). \\
-	\verb!Ctrl-C! & Copy. \\
-	\verb!Ctrl-Shift-C! & Copy current line(s). \\
-	\verb!Ctrl-V! & Paste. \\
-	\verb!Ctrl-D! & Duplicate line or selection. \\
-	\verb!Ctrl-Shift-Del! & Delete to line end. \\
-	\verb!Ctrl-K! & Delete current line(s). \\
+	\verb![c! & coc-diagnostic-prev \\
+	\verb!]c! & coc-diagnostic-next \\
+	\verb!gd! & coc-definition  \\
+	\verb!gy! & coc-type-definition \\
+	\verb!gi! & coc-implementation \\
+	\verb!gr! & coc-references  \\
+	\verb!K! & show\_documentation \\
+	\verb!<leader>rn! & coc-rename \\
+	\verb!<leader>f ! & coc-format-selected \\
+	\verb!<leader>a ! & coc-codeaction-selected \\
+	\verb!<leader>ac! & coc-codeaction \\
+    \verb!<leader>qf! & coc-fixcurrent \\
+	\verb!Space+a! & CocList diagnostics \\
+	\verb!Space+e! & CocList extensionss \\
+	\verb!Space+c! & CocList commands \\
+	\verb!Space+o! & CocList outline \\
+	\verb!Space+s! & CocList -I symbols \\
+	\verb!Space+j! & CocNext        \\
+	\verb!Space+k! & CocPrev        \\
+	\verb!Space+p! & CocListResume  \\
 \end{tabular}
 
-\section{Editing}
+\section{Defx File Explorer}
 \begin{tabular}{@{}ll@{}}
-	\verb!Shift-Alt-D! & Insert date. \\
-	\verb!Ctrl-E! & Toggle comment(s). \\
-	\verb!Ctrl-Alt-U! & Toggle case of selection. \\
-	\verb!Tab! & Word part completion. \\
-	\verb!Tab! & Complete snippet. \\
-	\verb!Ctrl-I! & Increase indent. \\
-	\verb!Ctrl-U! & Decrease indent. \\
-	\verb!Alt-PgUp! & Move line(s) up. \\
-	\verb!Alt-PgDn! & Move line(s) down. \\
-	\verb!Ctrl-Space! & Complete word. \\
-	\verb!Ctrl-Shift-T! & Go to tag declaration. \\
-	\verb!Ctrl-T! & Go to tag definition. \\
-	\verb!Ctrl-Z! & Undo. \\
-	\verb!Ctrl-Y! & Redo. \\
-	\verb!Ctrl-H! & Replace (dialog). \\
-	\verb!Ctrl-1(2,3)! & Send to custom command. \\
-	\verb!Ctrl-Shift-Space! & Show calltip. \\
+    \verb!Enter(?)! & drop \\
+	\verb!c! & copy \\
+	\verb!m! & move \\
+	\verb!p! & paste \\
+	\verb!l! & drop \\
+	\verb!E! & open, vsplit \\
+	\verb!P! & open, pedit \\
+	\verb!o! & open\_or\_close\_tree \\
+	\verb!K! & new\_directory \\
+	\verb!N! & new\_file \\
+	\verb!M! & new\_multiple\_files \\
+    \verb!C! & toggle\_columns, file \\
+    \verb!S! & toggle\_sort, time \\
+	\verb!d! & remove \\
+	\verb!r! & rename \\
+    \verb!Excl! &  execute\_command \\
+	\verb!x! & execute\_system \\
+	\verb!yy! & yank\_path \\
+	\verb!.! & toggle\_ignored\_files \\
+	\verb!;! & repeat \\
+	\verb!h! & cd .. \\
+	\verb!~! & cd \\
+	\verb!q! & Quit. \\
+	\verb!Space! & toggle\_select \\
+	\verb!*! & toggle\_select\_all \\
+    \verb!j! & gg(?) \\
+    \verb!k! & G(?) \\
+	\verb!Ctrl+l! & redraw \\
+	\verb!Ctrl+g! & print \\
+	\verb!cd! & change\_vim\_cwd \\
+	\verb!2+LeftMouse! & open\_or\_close\_tree \\
+	\verb!3+LeftMouse! & drop \\
+	\verb!RightMouse! & cd .. \\
 \end{tabular}
 
-\section{Files}
+\section{Denite}
 \begin{tabular}{@{}ll@{}}
-	\verb!Ctrl-N! & Create a new file. \\
-	\verb!Ctrl-O! & Open a file. \\
-	\verb!Ctrl-Shift-O! & Open selected file. \\
-	\verb!Ctrl-R! & Reload file. \\
-	\verb!Ctrl-Tab! & Switch to last used document. \\
-	\verb!Ctrl-S! & Save the current file. \\
-	\verb!Ctrl-Shift-S! & Save all open files. \\
-	\verb!Ctrl-W! & Close the current file. \\
-	\verb!Ctrl-Shift-W! & Close all files. \\
-	\verb!Ctrl-P! & Print the current file. \\
-	\verb!Ctrl-Q! & Quit Geany. \\
+	\verb!<leader>dp! & :DeniteProjectDir \\
+	\verb!<leader>do! & :DeniteProjectDir \\
+	\verb!<leader>df! & :DeniteProjectDir \\
+	\verb!<leader>dg! & :Denite grep \\
+	\verb!<leader>db! & :Denite buffer \\
 \end{tabular}
 
-\section{Build, Make, \& Compile}
+\section{Git}
 \begin{tabular}{@{}ll@{}}
-	\verb!Ctrl-Alt-P! & Preferences. \\
-	\verb!F9! & Build. \\
-	\verb!Shift-F8! & Make object. \\
-	\verb!Shift-F9! & Make all. \\
-	\verb!F8! & Compile. \\
-	\verb!F5! & Run. \\
-	\verb!Ctrl-Return! & Show macro list. \\
-	\verb!Ctrl-Shift-F9! & Make custom target. \\
-	\verb!Ctrl-Shift-R! & Reload symbol list. \\
+	\verb!<leader>gs! & :Gstatus \\
+	\verb!<leader>ga! & :Git add -A \\
+	\verb!<leader>gb! & :Gblame \\
+	\verb!<leader>gc! & :Gcommit \\
+	\verb!<leader>gd! & :Gdiff \\
+	\verb!<leader>gl! & :Glog \\
+	\verb!<leader>gp! & :Gpush \\
+	\verb!<leader>gpl! & :Gpull  \\
+	\verb!<leader>gr! & :Gread \\
+	\verb!<leader>gw! & :Gwrite \\
+	\verb!<leader>ge! & :Gedit \\
 \end{tabular}
 
-\section{Also}
+\section{Tabular}
 \begin{tabular}{@{}ll@{}}
-	\verb!F2! & Switch to Editor. \\
-	\verb!F4! & Switch to VTE. \\
-	\verb!F6! & Switch to Scribble. \\
-	\verb!F1! & Help. \\
+	\verb!<leader>t<Amp> ! & :Tabularize  /<Amp> \\
+	\verb!<leader>t= ! & :Tabularize  /= \\
+	\verb!<leader>t=>! & :Tabularize  /=> \\
+	\verb!<leader>t: ! & :Tabularize  /: \\
+	\verb!<leader>t::! & :Tabularize  /: zs \\
+	\verb!<leader>t, ! & :Tabularize  /, \\
+	\verb!<leader>t,,! & :Tabularize  /, zs \\
+	\verb!<leader>t<Bar>! & :Tabularize  /<Bar> \\
+	\verb!<leader>t<Backsl> ! & :Tabularize  /<Backsl> \\
+	\verb!<leader>t" ! & :Tabularize  /" \\
 \end{tabular}
 
-Single page cheat sheet based on \url{https://wiki.geany.org/howtos/sorted_keyboard_shortcuts}
+Single page cheat sheet based on \url{https://github.com/gquittet/dotfiles/tree/master/nvim/.config/nvim}
 
 \end{multicols}
 \end{document}
