@@ -8,7 +8,7 @@
 \footnotesize
 
 \begin{center}
-	\Huge{\textbf{Guillaume Quittet's Neovim Cheat Sheet}} \\
+    \Huge{\textbf{Guillaume Quittet's Neovim (\textit{mostly harmless})}} \\
 \end{center}
 \vspace*{0.5cm}
 
@@ -23,7 +23,7 @@
 \setlength{\multicolsep}{1pt}
 \setlength{\columnsep}{2pt}
 
-\section{Misc}
+\section{\sj{Misc}}
 \begin{tabular}{@{}ll@{}}
 	\verb!W, :w! & Save. \\
 	\verb!Space+Tab! & Esc. \\
@@ -37,21 +37,13 @@
     \verb!<leader>ut! & :UndoTreeToggle \\
 \end{tabular}
 
-\section{ALE}
+\section{\sj{ALE}}
 \begin{tabular}{@{}ll@{}}
 	\verb!<leader>ak! & ale\_previous\_wrap \\
 	\verb!<leader>aj! & ale\_next\_wrap \\
 \end{tabular}
 
-\section{Buffer}
-\begin{tabular}{@{}ll@{}}
-	\verb!<leader>bn! & :bnext \\
-	\verb!<leader>bp! & :bprevious \\
-	\verb!<leader>bf! & :bfirst \\
-	\verb!<leader>bd! & :bdelete \\
-\end{tabular}
-
-\section{Coc}
+\section{\sj{Coc}}
 \begin{tabular}{@{}ll@{}}
 	\verb![c! & coc-diagnostic-prev \\
 	\verb!]c! & coc-diagnostic-next \\
@@ -75,7 +67,7 @@
 	\verb!Space+p! & CocListResume  \\
 \end{tabular}
 
-\section{Defx File Explorer}
+\section{\sj{Defx File Explorer}}
 \begin{tabular}{@{}ll@{}}
     \verb!Enter(?)! & drop \\
 	\verb!c! & copy \\
@@ -112,7 +104,7 @@
 	\verb!RightMouse! & cd .. \\
 \end{tabular}
 
-\section{Denite}
+\section{\sj{Denite}}
 \begin{tabular}{@{}ll@{}}
 	\verb!<leader>dp! & :DeniteProjectDir \\
 	\verb!<leader>do! & :DeniteProjectDir \\
@@ -121,7 +113,7 @@
 	\verb!<leader>db! & :Denite buffer \\
 \end{tabular}
 
-\section{Git}
+\section{\sj{Git}}
 \begin{tabular}{@{}ll@{}}
 	\verb!<leader>gs! & :Gstatus \\
 	\verb!<leader>ga! & :Git add -A \\
@@ -136,7 +128,7 @@
 	\verb!<leader>ge! & :Gedit \\
 \end{tabular}
 
-\section{Tabular}
+\section{\sj{Tabular}}
 \begin{tabular}{@{}ll@{}}
 	\verb!<leader>t<Amp> ! & :Tabularize  /<Amp> \\
 	\verb!<leader>t= ! & :Tabularize  /= \\
@@ -148,6 +140,28 @@
 	\verb!<leader>t<Bar>! & :Tabularize  /<Bar> \\
 	\verb!<leader>t<Backsl> ! & :Tabularize  /<Backsl> \\
 	\verb!<leader>t" ! & :Tabularize  /" \\
+\end{tabular}
+
+\section{\sj{Buffer}}
+\begin{tabular}{@{}ll@{}}
+	\verb!<leader>bn! & :bnext \\
+	\verb!<leader>bp! & :bprevious \\
+	\verb!<leader>bf! & :bfirst \\
+	\verb!<leader>bd! & :bdelete \\
+\end{tabular}
+
+\section{\sv{Code Folding}}
+\begin{tabular}{@{}ll@{}}
+	\verb!zc! & Fold. \\
+	\verb!zo! & Unfold. \\
+	\verb!za! & Toggle fold. \\
+	\verb!zC! & Fold all the way up. \\
+	\verb!zO! & Unfold all the way down. \\
+	\verb!zA! & Toggle fold all the way. \\
+	\verb!zr! & Unfold everything a level.\\
+	\verb!zR! & Unfold everything.\\
+	\verb!zm! & Fold everything a level. \\
+	\verb!zM! & Fold everything. \\
 \end{tabular}
 
 Single page cheat sheet based on \url{https://github.com/gquittet/dotfiles/tree/master/nvim/.config/nvim}
