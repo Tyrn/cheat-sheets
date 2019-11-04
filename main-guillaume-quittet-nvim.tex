@@ -69,6 +69,7 @@
 
 \section{\sj{Defx File Explorer}}
 \begin{tabular}{@{}ll@{}}
+	\verb!<leader>tv! & Navigation Window. \\
     \verb!Enter(?)! & drop \\
 	\verb!c! & copy \\
 	\verb!m! & move \\
@@ -144,10 +145,11 @@
 
 \section{\sj{Buffer}}
 \begin{tabular}{@{}ll@{}}
-	\verb!<leader>bn! & :bnext \\
-	\verb!<leader>bp! & :bprevious \\
-	\verb!<leader>bf! & :bfirst \\
-	\verb!<leader>bd! & :bdelete \\
+	\verb!<leader>fn! & :bnext \\
+	\verb!<leader>fp! & :bprevious \\
+	\verb!<leader>ff! & :bfirst \\
+	\verb!<leader>fd! & :bdelete \\
+	\verb!<leader>sf! & Buffer List. \\
 \end{tabular}
 
 \section{\sv{Code Folding}}
@@ -162,6 +164,36 @@
 	\verb!zR! & Unfold everything.\\
 	\verb!zm! & Fold everything a level. \\
 	\verb!zM! & Fold everything. \\
+\end{tabular}
+
+\section{\sj{Undo Tree}}
+\begin{tabular}{@{}ll@{}}
+	\verb!<leader>uh! & Toggle Undo Tree. \\
+\end{tabular}
+
+\section{\sj{Split Windows}}
+\begin{tabular}{@{}ll@{}}
+	\verb!<leader>vv! & Split vertically. \\
+	\verb!<leader>vh! & Split horizontally. \\
+	\verb!<leader>h! & Go Left. \\
+	\verb!<leader>j! & Go Down. \\
+	\verb!<leader>k! & Go Up. \\
+	\verb!<leader>l! & Go Right. \\
+	\verb!<leader>so! & Leave only current. \\
+    \verb!<leader>sp(p)! & Increase width. \\
+    \verb!<leader>sm(m)! & Reduce width. \\
+	\verb!<leader>sP! & Increase height. \\
+	\verb!<leader>sM! & Reduce height. \\
+\end{tabular}
+
+\section{\sj{Spell Check}}
+\begin{tabular}{@{}ll@{}}
+	\verb!<leader>ss! & Toggle. \\
+\end{tabular}
+
+\section{\sj{Line wrap}}
+\begin{tabular}{@{}ll@{}}
+	\verb!<leader>sw! & Toggle. \\
 \end{tabular}
 
 Single page cheat sheet based on \url{https://github.com/gquittet/dotfiles/tree/master/nvim/.config/nvim}
