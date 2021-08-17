@@ -17,6 +17,9 @@ a4paper
 \usepackage[margin=0.5in]{geometry}
 \usepackage{tabto}
 
+\newcommand\vsp{\vspace{.2in}}
+\newcommand\tto{\tabto{2in}}
+
 \begin{document}
 \thispagestyle{empty}
 
@@ -58,7 +61,7 @@ $A=-Sr_{CE}=-\frac{I_C}{U_T}\frac{U_Y}{I_C}=-\frac{U_Y}{U_T}
 коэффициент усиления по напряжению для схемы с общим эмиттером.
 Знак <<минус>> означает поворот фазы на $180^{\circ}$.
 
-\vspace{.2in}
+\vsp
 
 При постоянной температуре приросту напряжения $U_{BE}$ на $60mV$
 соответствует десятикратный прирост коллекторного тока $I_C$;
@@ -76,13 +79,13 @@ $1.7mV$ на градус). Таким образом, фиксируя напр
 входным сопротивлением $r_e$, выходным сопротивлением $r_a$, и
 коэффициентом усиления по напряжению $A$.
 
-\vspace{.2in}
+\vsp
 
 \begin{Large}
 Усилитель на одном транзисторе
 \end{Large}
 
-\vspace{.2in}
+\vsp
 
 $R_C$, $R_E$~---~сопротивление нагрузки, в цепи коллектора и
 эмиттера соответственно. Дальнейшие равенства справедливы для
@@ -91,48 +94,48 @@ $R_C$, $R_E$~---~сопротивление нагрузки, в цепи кол
 
 Символ $\|$ означает параллельное соединение сопротивлений.
 
-\vspace{.2in}
+\vsp
 
 \begin{raggedright}
 
 \textit{Схема с общим эмиттером}:
 
 $r_e=r_{BE}=\frac{\beta}{S}=\frac{\beta U_T}{I_C}$
-\tabto{2in}
+\tto
 {\small сопротивление умеренное; можно повысить}
 \linebreak
-\tabto{2in}
+\tto
 {\small только за счет применения транзистора}
 \linebreak
-\tabto{2in}
+\tto
 {\small с высоким значением} $\beta$
 
 $r_a=R_C\|r_{CE}\approx R_C$
 \hspace{.2in}
 $A=-S R_C=-\frac{I_C R_C}{U_T}$
 
-\vspace{.2in}
+\vsp
 
 \textit{Схема с общей базой}:
 
 $r_e=\frac{1}{S}$
-\tabto{2in}
+\tto
 {\small сопротивление весьма низкое}
 
 $r_a\approx R_C$
 \hspace{.2in}
 $A=S R_C$
 
-\vspace{.2in}
+\vsp
 
 \textit{Схема с общим коллектором (эмиттерный повторитель)}:
 
 $r_e\approx\beta R_E$
-\tabto{2in}
+\tto
 {\small сопротивление весьма высокое}
 
 $r_a\approx\frac{1}{S}$
-\tabto{2in}
+\tto
 {\small сопротивление весьма низкое}
 
 $A\approx 1$
