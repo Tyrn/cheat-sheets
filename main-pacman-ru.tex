@@ -1,0 +1,59 @@
+\documentclass[
+a4paper
+,11pt
+,landscape
+,russian
+,twocolumn
+]{letter}
+
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{polyglossia}
+\setromanfont[Mapping=tex-text]{Liberation Serif}
+\setsansfont[Mapping=tex-text]{Liberation Sans}
+\setmonofont[Mapping=tex-text]{Liberation Mono}
+\setdefaultlanguage{russian} % Word wrap.
+\usepackage[margin=0.5in]{geometry}
+\usepackage{tabto}
+
+\newcommand\hsp{\hspace{.2in}}
+\newcommand\vsp{\vspace{.2in}}
+\newcommand\tto{\tabto{2in}}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{Large}
+    pacman \& yay
+\end{Large}
+
+\texttt{pacman} является единственным официальным менеджером пакетов для
+\texttt{Manjaro} и \texttt{Archlinux}; \texttt{yay}~---~одним из многих
+неофициальных.
+К опциям \texttt{pacman} \texttt{yay} добавляет набор своих, и обеспечивает
+удобную работу с AUR (Arch User Repository; неофициальная коллекция пакетов,
+собираемых, как правило, из исходных текстов на компьютере пользователя).
+
+\texttt{\$ yay -Sy}\hsp обновить индексы репозиториев, прописанных в
+\textit{/etc/pacman.conf}.
+
+\texttt{\$ yay -Su}\hsp обновить все пакеты, новые версии которых
+содержатся в индексах.
+
+\texttt{\$ yay -Syu}\hsp обновить индексы, а затем и пакеты.
+
+\vsp
+
+\begin{Large}
+Усилитель на одном транзисторе
+\end{Large}
+
+\vsp
+
+$R_C$, $R_E$~---~сопротивление нагрузки, в цепи коллектора и
+эмиттера соответственно. Дальнейшие равенства справедливы для
+случая, когда $r_{CE}=\frac{U_Y}{I_C}$ много больше сопротивления
+нагрузки, что справедливо в большинстве практических случаев.
+
+\end{document}
