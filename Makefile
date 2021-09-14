@@ -18,6 +18,7 @@ mopup:
 
 cleantarget:
 	find . -type f -name '*.pdf'  -delete
+	find . -type f -name '*.dvi'  -delete
 
 clean: mopup cleantarget
 
