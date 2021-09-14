@@ -20,13 +20,16 @@ a4paper
 \newcommand\hsp{\hspace{.2in}}
 \newcommand\vsp{\vspace{.2in}}
 \newcommand\tto{\tabto{2in}}
+\usepackage{hyperref}
 
 \begin{document}
 \thispagestyle{empty}
 
 \begin{Large}
-    pacman \& yay
+    pacman \& yay, самое необходимое
 \end{Large}
+
+\vsp
 
 \texttt{pacman} является единственным официальным менеджером пакетов для
 \texttt{Manjaro} и \texttt{Archlinux}; \texttt{yay}~---~одним из многих
@@ -43,17 +46,71 @@ a4paper
 
 \texttt{\$ yay -Syu}\hsp обновить индексы, а затем и пакеты.
 
+\texttt{\$ yay -Yc}\hsp удалить ненужные зависимости. Применять
+с осторожностью.
+
+\texttt{\$ [yes |] yay -Sc}\hsp очистить кэш пакетов, оставив только
+текущие версии. Утилита \texttt{yes} ответит ``\textit{yes}'' на вопросы
+менеджера пакетов.
+
+\texttt{\$ yay -Scc}\hsp очистить кэш пакетов полностью.
+
 \vsp
 
 \begin{Large}
-Усилитель на одном транзисторе
+установка и удаление пакетов
 \end{Large}
 
 \vsp
 
-$R_C$, $R_E$~---~сопротивление нагрузки, в цепи коллектора и
-эмиттера соответственно. Дальнейшие равенства справедливы для
-случая, когда $r_{CE}=\frac{U_Y}{I_C}$ много больше сопротивления
-нагрузки, что справедливо в большинстве практических случаев.
+\texttt{\$ yay -Ss geany}\hsp искать пакеты, имеющие отношение к
+\texttt{geany}.
+
+\texttt{\$ yay -S geany-plugins}\hsp установить желаемый пакет, в том
+числе из AUR.
+
+\texttt{\$ yay -U <local file>}\hsp установить пакет не из репозиториев,
+например, собранный вручную.
+
+\texttt{\$ yay -R geany}\hsp удалить пакет.
+
+\texttt{\$ yay -Rscn geany}\hsp удалить пакет со всеми зависимостями.
+Применять с осторожностью.
+
+\vsp
+
+\begin{Large}
+исследование пакетов
+\end{Large}
+
+\vsp
+
+\texttt{\$ yay -Qi}\hsp информация о пакете и его зависимостях.
+
+\texttt{\$ yay -Ql}\hsp файлы пакета.
+
+\texttt{\$ yay -Fy}\hsp обновить базу содержимого пакетов.
+
+\texttt{\$ yay -F latexmk}\hsp найти пакет, содержащий \texttt{latexmk}.
+
+\vsp
+
+\begin{Large}
+статистика
+\end{Large}
+
+\vsp
+
+\texttt{\$ exstat}\hsp место, занимаемое пакетами в системе
+(утилита определена в \textit{\~~/.zshrc}).
+
+\texttt{\$ exst}\hsp то же, что и \texttt{exstat}; только десять
+самых тяжелых пакетов.
+
+\vsp
+
+Документация
+\newline
+по-русски:~~\url{https://wiki.archlinux.org/title/Pacman_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)}
 
 \end{document}
