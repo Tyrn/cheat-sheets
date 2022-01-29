@@ -1,0 +1,125 @@
+; Nom hints.
+bits
+    complete/streaming
+        tag(pattern: u8, bits: usize)(i: (&[u8], usize)) -> IResult<(&[u8], usize), u8>
+        take(bits: usize)(i: (&[u8], usize)) -> IResult<(&[u8], usize), u8>
+  # bits(parser: (i: (&[u8], bits: usize)) -> IResult<(&[u8], usize), (u8, u8)>)(i: &[u8])
+                                                        -> IResult<&[u8], (u8, u8)> 
+  # bytes()
+branch
+    alt(l: List)(i: &str) -> IResult<&str, &str>
+    permutation(l: List)(i: &str) -> IResult<&str, (&str, &str, ...)>
+bytes
+    complete/streaming
+      # escaped(n: Parser, cc: char, e: Parser)(i: &str) -> IResult<&str, &str>
+      # escaped_transform(n: Parser, cc: char, t: Parser)(i: &str) -> IResult<&str, &str>
+        is_a(arr: &str)(i: &str) -> IResult<&str, &str>
+        is_not(arr: &str)(i: &str) -> IResult<&str, &str>
+        tag(tag: &str)(i: &str) -> IResult<&str, &str>
+        tag_no_case(tag: &str)(i: &str) -> IResult<&str, &str>
+        take(count: usize)(i: &str) -> IResult<&str, &str>
+        take_till[1](cond: Fn(Input) -> bool)(i: &str) -> IResult<&str, &str>
+        take_until[1](tag: &str)(i: &str) -> IResult<&str, &str>
+        take_while[1](cond: Fn(Input) -> bool)(i: &[u8]) -> IResult<&[u8], &[u8]>
+        take_while_m_n(m: usize, n: usize, cond: Fn(Input) -> bool)(i: &[u8]) -> IResult<&[u8], &[u8]>
+character
+    complete/streaming
+        alpha0/1(i: &str) -> IResult<&str, &str>
+        alphanumeric0/1(i: &str) -> IResult<&str, &str>
+        anychar(i: &str) -> IResult<&str, &str>
+        char(c: char)(i: &str) -> IResult<&str, char>
+        crlf(i: &str) -> IResult<&str, &str>
+        digit0/1(i: &str) -> IResult<&str, &str>
+        hex_digit0/1(i: &str) -> IResult<&str, &str>
+        i8/16/32/64/128(i: &str) -> IResult<&str, i8/16/32/64/128>
+        line_ending(i: &str) -> IResult<&str, &str>
+        multispace0/1(i: &str) -> IResult<&str, &str>
+        newline(i: &str) -> IResult<&str, char>
+      # none_of(c: char)(i: &str) -> IResult<&str, char>
+        not_line_ending(i: &str) -> IResult<&str, &str>
+        oct_digit0/1(i: &str) -> IResult<&str, &str>
+      # one_of(c: char)(i: &str) -> IResult<&str, char>
+        satisfy(cond: Fn(char) -> bool)(i: &str) -> IResult<&str, char>
+        space0/1(i: &str) -> IResult<&str, &str>
+        tab(i: &str) -> IResult<&str, char>
+        u8/16/32/64/128(i: &str) -> IResult<&str, u8/16/32/64/128>
+    is_alphabetic(chr: u8) -> bool
+    is_alphanumeric(chr: u8) -> bool
+    is_digit(chr: u8) -> bool
+    is_hex_digit(chr: u8) -> bool
+    is_newline(chr: u8) -> bool
+    is_oct_digit(chr: u8) -> bool
+    is_space(chr: u8) -> bool
+combinator
+    all_consuming(f: Parser)(i: &str) -> IResult<&str, &str>
+    complete(f: Parser)(i: &str) -> IResult<&str, &str>
+    cond(b: bool, f: Parser)(i: &str) -> IResult<&str, Option<&str>>
+    consumed(f: Parser)(i: &str) -> IResult<&str, (&str, f.O)>
+  # cut(f: Parser)(i: &str) -> IResult<&str, &str>
+    eof(i: &str) -> IResult<&str, &str>
+    fail(i: &str) -> IResult<&str, &str>
+  * flat_map(p: Parser, ap: Parser)(i: &[u8]) -> IResult<&[u8], &[u8]>
+    into(f: Parser) -> Parser
+    iterator(i: Input, f: Parser) -> ParserIterator
+    map(p: Parser, f: FnMut(O1) -> O2)(i: &str) -> IResult<&str, &str>
+    map_opt(p: Parser, f: FnMut(O1) -> Option<O2>)(i: &str) -> IResult<&str, &str>
+  * map_parser(p: Parser, ap: Parser)(i: &[u8]) -> IResult<&[u8], &[u8]>
+    map_res(p: Parser, f: FnMut(O1) -> Result<O2, E2>)(i: &str) -> IResult<&str, &str>
+    not(f: Parser)(i: &str) -> IResult<&str, ()>
+    opt(f: Parser)(i: &str) -> IResult<&str, Option<&str>>
+    peek(f: Parser)(i: &str) -> IResult<&str, &str>
+    recognize(f: Parser)(i: &str) -> IResult<&str, &str>
+    rest(i: &str) -> IResult<&str, &str>
+    rest_len(i: &str) -> IResult<&str, usize>
+    success(val: usize)(i: &str) -> IResult<&str, usize>
+    value(val: usize, f: Parser)(i: &str) -> IResult<&str, usize>
+    verify(f: Parser, s: Fn(&O2) -> bool)(i: &str) -> IResult<&str, &str>
+error
+    append_error()
+    context()
+    convert_error()
+    dbg_dmp()
+    error_to_u32()
+    make_error()
+lib
+    std
+multi
+    count(f: Parser, count: usize)(i: &str) -> IResult<&str, Vec<&str>>
+  # fill()
+    fold_many0/1(f: Parser, Vec::new, |mut acc: Vec<_>, item| {...})(i: &str)
+                                            -> IResult<&str, Vec<&str>>
+    fold_many_m_n(m: usize, n: usize, f: Parser,
+                            Vec::new, |mut acc: Vec<_>, item| {...})(i: &str)
+                                            -> IResult<&str, Vec<&str>>
+    length_count(f: Parser, g: Parser)(i: &[u8]) -> IResult<&[u8], Vec<&[u8]>>
+    length_data(f: Parser)(i: &[u8]) -> IResult<&[u8], &[u8]>
+    length_value(f: Parser, g: Parser)(i: &[u8]) -> IResult<&[u8], &[u8]>
+    many0/1(f: Parser)(i: &str) -> IResult<&str, Vec<&str>>
+    many0/1_count(f: Parser)(i: &str) -> IResult<&str, usize>
+    many_m_n(m: usize, n: usize, f: Parser)(i: &str) -> IResult<&str, Vec<&str>>
+    many_till(f: Parser, g: Parser)(i: &str) -> IResult<&str, (Vec<&str>, &str)>
+    separated_list0/1(sep: Parser, f: Parser)(i: &str) -> IResult<&str, Vec<&str>>
+number
+    complete/streaming
+        be_f32/64(i: &[u8]) -> IResult<&[u8], f32/64>
+        be_i8/16/32/64/128(i: &[u8]) -> IResult<&[u8], i8/16/32/64/128>
+        be_u8/16/32/64/128(i: &[u8]) -> IResult<&[u8], u8/16/32/64/128>
+        double(i: &str) -> IResult<&str, f64>
+        f32/64(endian: Endianness)(i: &[u8]) -> IResult<&[u8], f32/64>
+        float(i: &str) -> IResult<&str, f32>
+        hex_u32(i: &[u8]) -> IResult<&[u8], u32>
+        i8/16/32/64/128(endian: Endianness)(i: &[u8]) -> IResult<&[u8], i8/16/32/64/128>
+        le_f32/64(i: &[u8]) -> IResult<&[u8], f32/64>
+        le_i8/16/32/64/128(i: &[u8]) -> IResult<&[u8], i8/16/32/64/128>
+        le_u8/16/32/64/128(i: &[u8]) -> IResult<&[u8], u8/16/32/64/128>
+        recognize_float(i: &str) -> IResult<&str, &str>
+        recognize_float_parts(i: &str) -> IResult<bool, &str, &str, i32>
+        u8/16/32/64/128(endian: Endianness)(i: &[u8]) -> IResult<&[u8], i8/16/32/64/128>
+recipes
+sequence
+    delimited(f: Parser, s: Parser, t: Parser)(i: &str) -> IResult<&str, &str>
+    pair(f: Parser, s: Parser)(i: &str) -> IResult<&str, (&str, &str)>
+    preceded(f: Parser, s: Parser)(i: &str) -> IResult<&str, &str>
+    separated_pair(f: Parser, sep: Parser, s: Parser)(i: &str) -> IResult<&str, (&str, &str)>
+    terminated(f: Parser, s: Parser)(i: &str) -> IResult<&str, &str>
+    tuple(l: List)(i: &str) -> IResult<&str, (&str, &str, ...)>
