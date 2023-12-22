@@ -1,34 +1,32 @@
-\documentclass[
-a4paper
-,11pt
-,landscape
-,russian
-,twocolumn
-]{letter}
-
-\usepackage{fontspec}
-\usepackage{xunicode}
-\usepackage{xltxtra}
-\usepackage{polyglossia}
-\setromanfont[Mapping=tex-text]{Liberation Serif}
-\setsansfont[Mapping=tex-text]{Liberation Sans}
-\setmonofont[Mapping=tex-text]{Liberation Mono}
-\setdefaultlanguage{russian} % Word wrap.
-\usepackage[margin=0.5in]{geometry}
-\usepackage{tabto}
-
-\newcommand\vsp{\vspace{.2in}}
-\newcommand\tto{\tabto{2in}}
+\documentclass[a4paper
+  ,landscape
+  ,columns=3
+]{cheatsheet}
+\usepackage{array}
+\title{Doom Emacs Cheat Sheet}
+\author{A. Uthor\\\href{mailto:author@mail.eg}{author@mail.eg}}
+\date{\today}
 
 \begin{document}
-\thispagestyle{empty}
+\maketitle
+\section{Some things}
+Cheats
 
-\begin{Large}
-Doom Emacs 1
-\end{Large}
+\begin{tabular}{l>{\color{black}}l}
+	Ctrl-F & Find. \\
+	Ctrl-G & Find Next. \\
+	Ctrl-Shift-G & Find Previous. \\
+\end{tabular}
 
-\begin{raggedright}
+Cheats
 
-\end{raggedright}
+\section{Other things}
+more Cheats
+
+more Cheats
+
+\section{Still more things}
+still more Cheats
 
 \end{document}
+
