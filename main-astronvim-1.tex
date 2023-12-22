@@ -1,31 +1,44 @@
-\documentclass[a4paper
+\documentclass[
   ,landscape
   ,columns=3
 ]{cheatsheet}
+
+% Make the tables black.
+\makeatletter \def\m@th{\mathsurround\z@\color{black}} \makeatother
+% Allow \color in tabular.
 \usepackage{array}
-\title{Cheat--Sheet}
-\author{A. Uthor\\\href{mailto:author@mail.eg}{author@mail.eg}}
-\date{\today}
+
+\title{AstroNvim Cheat Sheet}
+\author{--}
+\date{Non-trivial shortcuts, mostly}
 
 \begin{document}
 \maketitle
-\section{Some things}
-Cheats
+
+\section{Navigate windows}
 
 \begin{tabular}{l>{\color{black}}l}
+  Ctrl-F & Find. \\
+	Ctrl-G & Find Next. \\
+	Ctrl-Shift-G & Find Previous. \\
+\end{tabular}
+
+\section{Other things}
+
+\begin{tabular}{ll}
 	Ctrl-F & Find. \\
 	Ctrl-G & Find Next. \\
 	Ctrl-Shift-G & Find Previous. \\
 \end{tabular}
 
-Cheats
-
-\section{Other things}
-more Cheats
-
-more Cheats
-
 \section{Still more things}
-still more Cheats
+
+\begin{tabular}{ll}
+	Ctrl-F & Find. \\
+	Ctrl-G & Find Next. \\
+	Ctrl-Shift-G & Find Previous. \\
+\end{tabular}
 
 \end{document}
+
+
