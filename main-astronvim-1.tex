@@ -10,41 +10,51 @@
 
 \title{AstroNvim Mappings}
 \author{Non-trivial shortcuts, mostly}
-\date{L--Leader (SPC), IP--Interactive Picker}
+\date{L--Leader (SPC),\\S--Shift, IP--Interactive Picker}
 
 \begin{document}
 \maketitle
 
+\section{VimTex}
+
+\begin{tabular}{ll}
+	\textbf{L l l l} & Toggle Comp    \\
+	L l l k          & Stop Comp      \\
+	\textbf{L l l v} & Forward Search \\
+\end{tabular}
+
 \section{General}
 
 \begin{tabular}{l>{\color{black}}l}
-	C-Up           & Resize Up      \\
-	C-Dn           & Resize Down    \\
-	C-Lt           & Resize Left    \\
-	C-Rt           & Resize Right   \\
-	C-k            & Up             \\
-	C-j            & Down           \\
-	C-h            & Left           \\
-	C-l            & Right          \\
-	C-s            & Save           \\
-	C-q            & Quit           \\
-	L n            & New File       \\
-	L c            & Close Buf, Tab \\
-	{]} t          & Next Tab       \\
-	{[} t          & Prev Tab       \\
-	\{ t           & Prev Tab       \\
-	L /            & Comment        \\
-	\textbackslash & HSplit         \\
-	\textbar       & VSplit         \\
-	\textbf{C-w c} & Close Win      \\
-	\textbf{C-w o} & Leave current  \\
+	C-Up           & Resize Up       \\
+	C-Dn           & Resize Down     \\
+	C-Lt           & Resize Left     \\
+	C-Rt           & Resize Right    \\
+	\textbf{C-k}   & Up              \\
+	\textbf{C-j}   & Down            \\
+	\textbf{C-h}   & Left            \\
+	\textbf{C-l}   & Right           \\
+	C-s            & Save            \\
+	C-q            & Quit            \\
+	L n            & New File        \\
+	L c            & Close Buf, Tab  \\
+	{]} t          & Next Tab        \\
+	{[} t          & Prev Tab        \\
+	\{ t           & Prev Tab        \\
+	L /            & Comment         \\
+	\textbackslash & \textbf{HSplit} \\
+	\textbar       & \textbf{VSplit} \\
+	\textbf{C-w c} & Close Win       \\
+	\textbf{C-w o} & Leave current   \\
+	\textbf{L u s} & Toggle Spell    \\
+	\textbf{L u w} & Toggle wrap     \\
 \end{tabular}
 
 \section{Buffers}
 
 \begin{tabular}{ll}
-	{]} b              & Next                   \\
-	{[} b              & Prev                   \\
+	\textbf{{]} b}     & Next                   \\
+	\textbf{{[} b}     & Prev                   \\
 	> b                & Move Right             \\
 	< b                & Move Left              \\
 	L b b              & To tab with IP         \\
@@ -66,8 +76,8 @@
 \section{NeoTree}
 
 \begin{tabular}{ll}
-	L e & Toggle \\
-	L o & Focus  \\
+	\textbf{L e} & Toggle \\
+	L o          & Focus  \\
 \end{tabular}
 
 \section{Dashboard}
@@ -124,6 +134,27 @@
 	L l & \\
 	L l & \\
 	L l & \\
+\end{tabular}
+
+\section{Debugger}
+
+\begin{tabular}{ll}
+	L d c, \textbf{F5}    & Start/Continue \\
+	L d p, \textbf{F6}    & Pause          \\
+	L d r, \textbf{C-F5}  & Restart        \\
+	L d s                 & To Cursor      \\
+	L d q                 & Close Session  \\
+	L d Q, \textbf{S-F5}  & Terminate      \\
+	L d b, \textbf{F6}    & Toggle Bpoint  \\
+	L d C, \textbf{S-F9}  & Conf Bpoint    \\
+	L d B                 & Clear Bpoints  \\
+	L d o, \textbf{F10}   & Step Over      \\
+	L d i, \textbf{F11}   & Step Into      \\
+	L d O, \textbf{S-F11} & Step Out       \\
+	L d E                 & Evaluate Expr  \\
+	L d R                 & Toggle Repl    \\
+	L d u                 & Toggle Dbg UI  \\
+	L d h                 & Dbg Hover      \\
 \end{tabular}
 
 \section{Telescope}
