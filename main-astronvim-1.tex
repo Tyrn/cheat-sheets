@@ -34,8 +34,8 @@
 	{[} t          & Prev Tab       \\
 	\{ t           & Prev Tab       \\
 	L /            & Comment        \\
-	\textbackslash & Horiz Split    \\
-	\textbar       & Vert Split     \\
+	\textbackslash & HSplit         \\
+	\textbar       & VSplit         \\
 	\textbf{C-w c} & Close Win      \\
 	\textbf{C-w o} & Leave current  \\
 \end{tabular}
@@ -43,13 +43,113 @@
 \section{Buffers}
 
 \begin{tabular}{ll}
-	{]} b & Next           \\
-	{[} b & Prev           \\
-	> b   & Move Right     \\
-	< b   & Move Left      \\
-	L b b & To tab with IP \\
-	L b c & Leave current  \\
-	L b C & Close All      \\
+	{]} b              & Next                   \\
+	{[} b              & Prev                   \\
+	> b                & Move Right             \\
+	< b                & Move Left              \\
+	L b b              & To tab with IP         \\
+	L b c              & Leave current          \\
+	L b C              & Close All              \\
+	L b d              & Delete a tab w/ IP     \\
+	L b l              & Close all to the Left  \\
+	L b p              & Go to the Prev         \\
+	L b r              & Close all to the Right \\
+	L b s e            & Sort by Ext            \\
+	L b s i            & Sort by Num            \\
+	L b s m            & Sort by Modification   \\
+	L b s p            & Sort by Full Path      \\
+	L b s r            & Sort by Rel Path       \\
+	L b \textbackslash & Tab in a HSplit w/ IP  \\
+	L b {|}            & Tab in a VSplit w/ IP  \\
+\end{tabular}
+
+\section{NeoTree}
+
+\begin{tabular}{ll}
+	L e & Toggle \\
+	L o & Focus  \\
+\end{tabular}
+
+\section{Dashboard}
+
+\begin{tabular}{ll}
+	L h & Home \\
+\end{tabular}
+
+\section{Session}
+
+\begin{tabular}{ll}
+	L S s & Save             \\
+	L S l & Last             \\
+	L S d & Delete           \\
+	L S f & Search           \\
+	L S . & Load Current Dir \\
+\end{tabular}
+
+\section{Package}
+
+\begin{tabular}{ll}
+	L p a & Packages Update \\
+	L p A & Updater         \\
+	L p l & Changelog       \\
+	L p v & Version         \\
+	L p m & Mason Installer \\
+	L p M & Mason Updater   \\
+	L p i & Plugins Install \\
+	L p s & Plugins Status  \\
+	L p S & Plugins Sync    \\
+	L p u & Plugins Check   \\
+	L p U & Plugins Update  \\
+\end{tabular}
+
+\section{LSP}
+
+\begin{tabular}{ll}
+	L l & \\
+	L l & \\
+	L l & \\
+	L l & \\
+	L l & \\
+	L l & \\
+	L l & \\
+	L l & \\
+	L l & \\
+	L l & \\
+	L l & \\
+	L l & \\
+	L l & \\
+	L l & \\
+	L l & \\
+	L l & \\
+	L l & \\
+	L l & \\
+	L l & \\
+\end{tabular}
+
+\section{Telescope}
+
+\begin{tabular}{ll}
+	L f ' & Marks          \\
+	L f b & Buffers        \\
+	L f c & Word at Cursor \\
+	L f C & Commands       \\
+	L f f & Find Files     \\
+	L f F & Also Hidden    \\
+	L f h & Help Tags      \\
+	L f k & Keymaps        \\
+	L f m & Man Pages      \\
+	L f n & Notifications  \\
+	L f o & Old Files      \\
+	L f r & Registers      \\
+	L f t & Colorschemes   \\
+	L f w & Live Grep      \\
+	L f W & Also Hidden    \\
+	L g b & Git Branches   \\
+	L g c & Git commits    \\
+	L g C & Git Commits    \\
+	L g t & Git Status     \\
+	L l s & LSP Symbols    \\
+	L l G & LSP WSymbols   \\
 \end{tabular}
 
 \end{document}
