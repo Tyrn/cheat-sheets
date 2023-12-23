@@ -1,6 +1,6 @@
 \documentclass[
   ,landscape
-  ,columns=3
+  ,columns=4
 ]{cheatsheet}
 
 % Make the tables black.
@@ -8,35 +8,48 @@
 % Allow \color in tabular.
 \usepackage{array}
 
-\title{AstroNvim Cheat Sheet}
-\author{--}
-\date{Non-trivial shortcuts, mostly}
+\title{AstroNvim Mappings}
+\author{Non-trivial shortcuts, mostly}
+\date{L--Leader (SPC), IP--Interactive Picker}
 
 \begin{document}
 \maketitle
 
-\section{Navigate windows}
+\section{General}
 
 \begin{tabular}{l>{\color{black}}l}
-  Ctrl-F & Find. \\
-	Ctrl-G & Find Next. \\
-	Ctrl-Shift-G & Find Previous. \\
+	C-Up & Resize Up \\
+	C-Dn & Resize Down \\
+	C-Lt & Resize Left \\
+	C-Rt & Resize Right \\
+	C-k & Up \\
+	C-j & Down \\
+  C-h & Left \\
+	C-l & Right \\
+	C-s & Save \\
+	C-q & Quit \\
+	L n & New File \\
+	L c & Close Buf \\
+	{]} t & Next Tab \\
+	{[} t & Prev Tab \\
+	\{ t & Prev Tab \\
+	L / & Comment \\
+  \textbackslash & Horiz Split \\
+  \textbar & Vert Split \\
+	\textbf{C-w c} & Close Win \\
+	\textbf{C-w o} & Leave current \\
 \end{tabular}
 
-\section{Other things}
+\section{Buffers}
 
 \begin{tabular}{ll}
-	Ctrl-F & Find. \\
-	Ctrl-G & Find Next. \\
-	Ctrl-Shift-G & Find Previous. \\
-\end{tabular}
-
-\section{Still more things}
-
-\begin{tabular}{ll}
-	Ctrl-F & Find. \\
-	Ctrl-G & Find Next. \\
-	Ctrl-Shift-G & Find Previous. \\
+	{]} b & Next \\
+	{[} b & Prev \\
+	> b & Move Right \\
+	< b & Move Left \\
+	L b b & To tab with IP \\
+	L b c & Leave current \\
+	L b C & Close All \\
 \end{tabular}
 
 \end{document}
