@@ -8,195 +8,195 @@
 \footnotesize
 
 \begin{center}
-    \Huge{\textbf{Guillaume Quittet's Neovim (\textit{mostly harmless})}} \\
+	\Huge{\textbf{Guillaume Quittet's Neovim (\textit{mostly harmless})}} \\
 \end{center}
 \vspace*{0.5cm}
 
 \begin{multicols}{3}
 
 
-% multicol parameters
-% These lengths are set only within the two main columns
-%\setlength{\columnseprule}{0.25pt}
-\setlength{\premulticols}{1pt}
-\setlength{\postmulticols}{1pt}
-\setlength{\multicolsep}{1pt}
-\setlength{\columnsep}{2pt}
+	% multicol parameters
+	% These lengths are set only within the two main columns
+	%\setlength{\columnseprule}{0.25pt}
+	\setlength{\premulticols}{1pt}
+	\setlength{\postmulticols}{1pt}
+	\setlength{\multicolsep}{1pt}
+	\setlength{\columnsep}{2pt}
 
-\section{\sj{Misc}}
-\begin{tabular}{@{}ll@{}}
-	\verb!W, :w! & Save. \\
-	\verb!Space+Tab! & Esc. \\
-    \verb!y(?)! & escape() \\
-	\verb!Ctrl+Space! & coc\#refresh()\\
-    \verb!Ctrl+y(?)! & pumvisible() \\
-    \verb!<leader>nh! & :nohl \\
-    \verb!F3! & :NumbersToggle \\
-    \verb!F4! & :NumbersOnOff \\
-    \verb!<leader>tb! & :TagbarToggle \\
-    \verb!<leader>ut! & :UndoTreeToggle \\
-\end{tabular}
+	\section{\sj{Misc}}
+	\begin{tabular}{@{}ll@{}}
+		\verb!W, :w!      & Save.           \\
+		\verb!Space+Tab!  & Esc.            \\
+		\verb!y(?)!       & escape()        \\
+		\verb!Ctrl+Space! & coc\#refresh()  \\
+		\verb!Ctrl+y(?)!  & pumvisible()    \\
+		\verb!<leader>nh! & :nohl           \\
+		\verb!F3!         & :NumbersToggle  \\
+		\verb!F4!         & :NumbersOnOff   \\
+		\verb!<leader>tb! & :TagbarToggle   \\
+		\verb!<leader>ut! & :UndoTreeToggle \\
+	\end{tabular}
 
-\section{\sj{ALE}}
-\begin{tabular}{@{}ll@{}}
-	\verb!<leader>ak! & ale\_previous\_wrap \\
-	\verb!<leader>aj! & ale\_next\_wrap \\
-\end{tabular}
+	\section{\sj{ALE}}
+	\begin{tabular}{@{}ll@{}}
+		\verb!<leader>ak! & ale\_previous\_wrap \\
+		\verb!<leader>aj! & ale\_next\_wrap     \\
+	\end{tabular}
 
-\section{\sj{Coc}}
-\begin{tabular}{@{}ll@{}}
-	\verb![c! & coc-diagnostic-prev \\
-	\verb!]c! & coc-diagnostic-next \\
-	\verb!gd! & coc-definition  \\
-	\verb!gy! & coc-type-definition \\
-	\verb!gi! & coc-implementation \\
-	\verb!gr! & coc-references  \\
-	\verb!K! & show\_documentation \\
-	\verb!<leader>rn! & coc-rename \\
-	\verb!<leader>f ! & coc-format-selected \\
-	\verb!<leader>a ! & coc-codeaction-selected \\
-	\verb!<leader>ac! & coc-codeaction \\
-    \verb!<leader>qf! & coc-fixcurrent \\
-	\verb!Space+a! & CocList diagnostics \\
-	\verb!Space+e! & CocList extensionss \\
-	\verb!Space+c! & CocList commands \\
-	\verb!Space+o! & CocList outline \\
-	\verb!Space+s! & CocList -I symbols \\
-	\verb!Space+j! & CocNext        \\
-	\verb!Space+k! & CocPrev        \\
-	\verb!Space+p! & CocListResume  \\
-\end{tabular}
+	\section{\sj{Coc}}
+	\begin{tabular}{@{}ll@{}}
+		\verb![c!         & coc-diagnostic-prev     \\
+		\verb!]c!         & coc-diagnostic-next     \\
+		\verb!gd!         & coc-definition          \\
+		\verb!gy!         & coc-type-definition     \\
+		\verb!gi!         & coc-implementation      \\
+		\verb!gr!         & coc-references          \\
+		\verb!K!          & show\_documentation     \\
+		\verb!<leader>rn! & coc-rename              \\
+		\verb!<leader>f ! & coc-format-selected     \\
+		\verb!<leader>a ! & coc-codeaction-selected \\
+		\verb!<leader>ac! & coc-codeaction          \\
+		\verb!<leader>qf! & coc-fixcurrent          \\
+		\verb!Space+a!    & CocList diagnostics     \\
+		\verb!Space+e!    & CocList extensionss     \\
+		\verb!Space+c!    & CocList commands        \\
+		\verb!Space+o!    & CocList outline         \\
+		\verb!Space+s!    & CocList -I symbols      \\
+		\verb!Space+j!    & CocNext                 \\
+		\verb!Space+k!    & CocPrev                 \\
+		\verb!Space+p!    & CocListResume           \\
+	\end{tabular}
 
-\section{\sj{Defx File Explorer}}
-\begin{tabular}{@{}ll@{}}
-	\verb!<leader>tv! & Navigation Window. \\
-    \verb!Enter(?)! & drop \\
-	\verb!c! & copy \\
-	\verb!m! & move \\
-	\verb!p! & paste \\
-	\verb!l! & drop \\
-	\verb!E! & open, vsplit \\
-	\verb!P! & open, pedit \\
-	\verb!o! & open\_or\_close\_tree \\
-	\verb!K! & new\_directory \\
-	\verb!N! & new\_file \\
-	\verb!M! & new\_multiple\_files \\
-    \verb!C! & toggle\_columns, file \\
-    \verb!S! & toggle\_sort, time \\
-	\verb!d! & remove \\
-	\verb!r! & rename \\
-    \verb!Excl! &  execute\_command \\
-	\verb!x! & execute\_system \\
-	\verb!yy! & yank\_path \\
-	\verb!.! & toggle\_ignored\_files \\
-	\verb!;! & repeat \\
-	\verb!h! & cd .. \\
-	\verb!~! & cd \\
-	\verb!q! & Quit. \\
-	\verb!Space! & toggle\_select \\
-	\verb!*! & toggle\_select\_all \\
-    \verb!j! & gg(?) \\
-    \verb!k! & G(?) \\
-	\verb!Ctrl+l! & redraw \\
-	\verb!Ctrl+g! & print \\
-	\verb!cd! & change\_vim\_cwd \\
-	\verb!2+LeftMouse! & open\_or\_close\_tree \\
-	\verb!3+LeftMouse! & drop \\
-	\verb!RightMouse! & cd .. \\
-\end{tabular}
+	\section{\sj{Defx File Explorer}}
+	\begin{tabular}{@{}ll@{}}
+		\verb!<leader>tv!  & Navigation Window.     \\
+		\verb!Enter(?)!    & drop                   \\
+		\verb!c!           & copy                   \\
+		\verb!m!           & move                   \\
+		\verb!p!           & paste                  \\
+		\verb!l!           & drop                   \\
+		\verb!E!           & open, vsplit           \\
+		\verb!P!           & open, pedit            \\
+		\verb!o!           & open\_or\_close\_tree  \\
+		\verb!K!           & new\_directory         \\
+		\verb!N!           & new\_file              \\
+		\verb!M!           & new\_multiple\_files   \\
+		\verb!C!           & toggle\_columns, file  \\
+		\verb!S!           & toggle\_sort, time     \\
+		\verb!d!           & remove                 \\
+		\verb!r!           & rename                 \\
+		\verb!Excl!        & execute\_command       \\
+		\verb!x!           & execute\_system        \\
+		\verb!yy!          & yank\_path             \\
+		\verb!.!           & toggle\_ignored\_files \\
+		\verb!;!           & repeat                 \\
+		\verb!h!           & cd ..                  \\
+		\verb!~!           & cd                     \\
+		\verb!q!           & Quit.                  \\
+		\verb!Space!       & toggle\_select         \\
+		\verb!*!           & toggle\_select\_all    \\
+		\verb!j!           & gg(?)                  \\
+		\verb!k!           & G(?)                   \\
+		\verb!Ctrl+l!      & redraw                 \\
+		\verb!Ctrl+g!      & print                  \\
+		\verb!cd!          & change\_vim\_cwd       \\
+		\verb!2+LeftMouse! & open\_or\_close\_tree  \\
+		\verb!3+LeftMouse! & drop                   \\
+		\verb!RightMouse!  & cd ..                  \\
+	\end{tabular}
 
-\section{\sj{Denite}}
-\begin{tabular}{@{}ll@{}}
-	\verb!<leader>dp! & :DeniteProjectDir \\
-	\verb!<leader>do! & :DeniteProjectDir \\
-	\verb!<leader>df! & :DeniteProjectDir \\
-	\verb!<leader>dg! & :Denite grep \\
-	\verb!<leader>db! & :Denite buffer \\
-\end{tabular}
+	\section{\sj{Denite}}
+	\begin{tabular}{@{}ll@{}}
+		\verb!<leader>dp! & :DeniteProjectDir \\
+		\verb!<leader>do! & :DeniteProjectDir \\
+		\verb!<leader>df! & :DeniteProjectDir \\
+		\verb!<leader>dg! & :Denite grep      \\
+		\verb!<leader>db! & :Denite buffer    \\
+	\end{tabular}
 
-\section{\sj{Git}}
-\begin{tabular}{@{}ll@{}}
-	\verb!<leader>gs! & :Gstatus \\
-	\verb!<leader>ga! & :Git add -A \\
-	\verb!<leader>gb! & :Gblame \\
-	\verb!<leader>gc! & :Gcommit \\
-	\verb!<leader>gd! & :Gdiff \\
-	\verb!<leader>gl! & :Glog \\
-	\verb!<leader>gp! & :Gpush \\
-	\verb!<leader>gpl! & :Gpull  \\
-	\verb!<leader>gr! & :Gread \\
-	\verb!<leader>gw! & :Gwrite \\
-	\verb!<leader>ge! & :Gedit \\
-\end{tabular}
+	\section{\sj{Git}}
+	\begin{tabular}{@{}ll@{}}
+		\verb!<leader>gs!  & :Gstatus    \\
+		\verb!<leader>ga!  & :Git add -A \\
+		\verb!<leader>gb!  & :Gblame     \\
+		\verb!<leader>gc!  & :Gcommit    \\
+		\verb!<leader>gd!  & :Gdiff      \\
+		\verb!<leader>gl!  & :Glog       \\
+		\verb!<leader>gp!  & :Gpush      \\
+		\verb!<leader>gpl! & :Gpull      \\
+		\verb!<leader>gr!  & :Gread      \\
+		\verb!<leader>gw!  & :Gwrite     \\
+		\verb!<leader>ge!  & :Gedit      \\
+	\end{tabular}
 
-\section{\sj{Tabular}}
-\begin{tabular}{@{}ll@{}}
-	\verb!<leader>t<Amp> ! & :Tabularize  /<Amp> \\
-	\verb!<leader>t= ! & :Tabularize  /= \\
-	\verb!<leader>t=>! & :Tabularize  /=> \\
-	\verb!<leader>t: ! & :Tabularize  /: \\
-	\verb!<leader>t::! & :Tabularize  /: zs \\
-	\verb!<leader>t, ! & :Tabularize  /, \\
-	\verb!<leader>t,,! & :Tabularize  /, zs \\
-	\verb!<leader>t<Bar>! & :Tabularize  /<Bar> \\
-	\verb!<leader>t<Backsl> ! & :Tabularize  /<Backsl> \\
-	\verb!<leader>t" ! & :Tabularize  /" \\
-\end{tabular}
+	\section{\sj{Tabular}}
+	\begin{tabular}{@{}ll@{}}
+		\verb!<leader>t<Amp> !    & :Tabularize  /<Amp>    \\
+		\verb!<leader>t= !        & :Tabularize  /=        \\
+		\verb!<leader>t=>!        & :Tabularize  /=>       \\
+		\verb!<leader>t: !        & :Tabularize  /:        \\
+		\verb!<leader>t::!        & :Tabularize  /: zs     \\
+		\verb!<leader>t, !        & :Tabularize  /,        \\
+		\verb!<leader>t,,!        & :Tabularize  /, zs     \\
+		\verb!<leader>t<Bar>!     & :Tabularize  /<Bar>    \\
+		\verb!<leader>t<Backsl> ! & :Tabularize  /<Backsl> \\
+		\verb!<leader>t" !        & :Tabularize  /"        \\
+	\end{tabular}
 
-\section{\sj{Buffer}}
-\begin{tabular}{@{}ll@{}}
-	\verb!<leader>fn! & :bnext \\
-	\verb!<leader>fp! & :bprevious \\
-	\verb!<leader>ff! & :bfirst \\
-	\verb!<leader>fd! & :bdelete \\
-	\verb!<leader>sf! & Buffer List. \\
-\end{tabular}
+	\section{\sj{Buffer}}
+	\begin{tabular}{@{}ll@{}}
+		\verb!<leader>fn! & :bnext       \\
+		\verb!<leader>fp! & :bprevious   \\
+		\verb!<leader>ff! & :bfirst      \\
+		\verb!<leader>fd! & :bdelete     \\
+		\verb!<leader>sf! & Buffer List. \\
+	\end{tabular}
 
-\section{\sv{Code Folding}}
-\begin{tabular}{@{}ll@{}}
-	\verb!zc! & Fold. \\
-	\verb!zo! & Unfold. \\
-	\verb!za! & Toggle fold. \\
-	\verb!zC! & Fold all the way up. \\
-	\verb!zO! & Unfold all the way down. \\
-	\verb!zA! & Toggle fold all the way. \\
-	\verb!zr! & Unfold everything a level.\\
-	\verb!zR! & Unfold everything.\\
-	\verb!zm! & Fold everything a level. \\
-	\verb!zM! & Fold everything. \\
-\end{tabular}
+	\section{\sv{Code Folding}}
+	\begin{tabular}{@{}ll@{}}
+		\verb!zc! & Fold.                      \\
+		\verb!zo! & Unfold.                    \\
+		\verb!za! & Toggle fold.               \\
+		\verb!zC! & Fold all the way up.       \\
+		\verb!zO! & Unfold all the way down.   \\
+		\verb!zA! & Toggle fold all the way.   \\
+		\verb!zr! & Unfold everything a level. \\
+		\verb!zR! & Unfold everything.         \\
+		\verb!zm! & Fold everything a level.   \\
+		\verb!zM! & Fold everything.           \\
+	\end{tabular}
 
-\section{\sj{Undo Tree}}
-\begin{tabular}{@{}ll@{}}
-	\verb!<leader>uh! & Toggle Undo Tree. \\
-\end{tabular}
+	\section{\sj{Undo Tree}}
+	\begin{tabular}{@{}ll@{}}
+		\verb!<leader>uh! & Toggle Undo Tree. \\
+	\end{tabular}
 
-\section{\sj{Split Windows}}
-\begin{tabular}{@{}ll@{}}
-	\verb!<leader>vv! & Split vertically. \\
-	\verb!<leader>vh! & Split horizontally. \\
-	\verb!<leader>h! & Go Left. \\
-	\verb!<leader>j! & Go Down. \\
-	\verb!<leader>k! & Go Up. \\
-	\verb!<leader>l! & Go Right. \\
-	\verb!<leader>so! & Leave only current. \\
-    \verb!<leader>sp(p)! & Increase width. \\
-    \verb!<leader>sm(m)! & Reduce width. \\
-	\verb!<leader>sP! & Increase height. \\
-	\verb!<leader>sM! & Reduce height. \\
-\end{tabular}
+	\section{\sj{Split Windows}}
+	\begin{tabular}{@{}ll@{}}
+		\verb!<leader>vv!    & Split vertically.   \\
+		\verb!<leader>vh!    & Split horizontally. \\
+		\verb!<leader>h!     & Go Left.            \\
+		\verb!<leader>j!     & Go Down.            \\
+		\verb!<leader>k!     & Go Up.              \\
+		\verb!<leader>l!     & Go Right.           \\
+		\verb!<leader>so!    & Leave only current. \\
+		\verb!<leader>sp(p)! & Increase width.     \\
+		\verb!<leader>sm(m)! & Reduce width.       \\
+		\verb!<leader>sP!    & Increase height.    \\
+		\verb!<leader>sM!    & Reduce height.      \\
+	\end{tabular}
 
-\section{\sj{Spell Check}}
-\begin{tabular}{@{}ll@{}}
-	\verb!<leader>ss! & Toggle. \\
-\end{tabular}
+	\section{\sj{Spell Check}}
+	\begin{tabular}{@{}ll@{}}
+		\verb!<leader>ss! & Toggle. \\
+	\end{tabular}
 
-\section{\sj{Line wrap}}
-\begin{tabular}{@{}ll@{}}
-	\verb!<leader>sw! & Toggle. \\
-\end{tabular}
+	\section{\sj{Line wrap}}
+	\begin{tabular}{@{}ll@{}}
+		\verb!<leader>sw! & Toggle. \\
+	\end{tabular}
 
-Single page cheat sheet based on \url{https://github.com/gquittet/dotfiles/tree/master/nvim/.config/nvim}
+	Single page cheat sheet based on \url{https://github.com/gquittet/dotfiles/tree/master/nvim/.config/nvim}
 
 \end{multicols}
 \end{document}
