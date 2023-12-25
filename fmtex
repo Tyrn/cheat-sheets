@@ -5,8 +5,8 @@ import subprocess
 import sys
 from pathlib import Path
 
-SRC_DIRS = "."
-EXTENSIONS = ".TEX"
+SRC_DIRS = (".",)
+EXTENSIONS = (".TEX",)
 
 for dir in SRC_DIRS:
     for root, _, files in os.walk(Path(dir).resolve()):
