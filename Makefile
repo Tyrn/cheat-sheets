@@ -8,5 +8,6 @@ clean:
 
 run:
 	latexmk main-*.tex
+	pdftex vimqrc.tex
 	
 .PHONY: mopup clean
