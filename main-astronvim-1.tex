@@ -65,6 +65,7 @@
 \section{Buffers}
 
 \begin{tabular}{lr}
+	:e!                & Reload Buffer          \\
 	\textbf{{]} b}     & Next                   \\
 	\textbf{{[} b}     & Prev                   \\
 	> b                & Move Right             \\
@@ -198,15 +199,23 @@
 	L l G & LSP WSymbols   \\
 \end{tabular}
 
-\section{Sel/Del/Ins}
+\section{Tips \& Tricks}
 
 \begin{tabular}{lr}
-	x p   & Swap chars       \\
-	u     & Tolower selected \\
-	U     & Toupper selected \\
-	v i w & Select word      \\
-	d i w & Del word         \\
-	c i w & Del word \& Ins  \\
+	\textbf{C-o} & Jump to Prev          \\
+	x p          & Swap chars            \\
+	u            & Tolower selected      \\
+	U            & Toupper selected      \\
+	y w          & Yank word             \\
+	y i w        & Yank whole word       \\
+	v w          & Select word           \\
+	v i w        & Select whole word     \\
+	d w          & Del word              \\
+	d i w        & Del whole word        \\
+	c w          & Del word \& Ins       \\
+	c i w        & Del whole word \& Ins \\
+	D            & Delete Tail           \\
+	C            & Delete Tail \& Ins    \\
 \end{tabular}
 
 \end{document}
