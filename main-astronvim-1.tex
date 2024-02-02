@@ -38,28 +38,27 @@
 \section{General}
 
 \begin{tabular}{l>{\color{black}}r}
-	C-Up           & Resize Up       \\
-	C-Dn           & Resize Down     \\
-	C-Lt           & Resize Left     \\
-	C-Rt           & Resize Right    \\
-	\textbf{C-k}   & Up              \\
-	\textbf{C-j}   & Down            \\
-	\textbf{C-h}   & Left            \\
-	\textbf{C-l}   & Right           \\
-	C-s            & Save            \\
-	C-q            & Quit            \\
-	L n            & New File        \\
-	L c            & Close Buf, Tab  \\
-	{]} t          & Next Tab        \\
-	{[} t          & Prev Tab        \\
-	\{ t           & Prev Tab        \\
-	L /            & Comment         \\
-	\textbackslash & \textbf{HSplit} \\
-	\textbar       & \textbf{VSplit} \\
-	\textbf{C-w c} & Close Win       \\
-	\textbf{C-w o} & Leave current   \\
-	\textbf{L u s} & Toggle Spell    \\
-	\textbf{L u w} & Toggle wrap     \\
+	C-Up           & Resize Up          \\
+	C-Dn           & Resize Down        \\
+	C-Lt           & Resize Left        \\
+	C-Rt           & Resize Right       \\
+	\textbf{C-k}   & Up                 \\
+	\textbf{C-j}   & Down               \\
+	\textbf{C-h}   & Left               \\
+	\textbf{C-l}   & Right              \\
+	C-s            & Save               \\
+	C-q            & Quit               \\
+	L n            & New File           \\
+	{]} t          & Next Tab           \\
+	{[} t          & Prev Tab           \\
+	\{ t           & Prev Tab           \\
+	L /            & Comment            \\
+	\textbackslash & \textbf{HSplit}    \\
+	\textbar       & \textbf{VSplit}    \\
+	\textbf{C-w c} & Close Win          \\
+	\textbf{C-w o} & Leave current only \\
+	\textbf{L u s} & Toggle Spell       \\
+	\textbf{L u w} & Toggle wrap        \\
 \end{tabular}
 
 \section{Buffers}
@@ -68,6 +67,7 @@
 	:e!                & Reload Buffer          \\
 	\textbf{{]} b}     & Next                   \\
 	\textbf{{[} b}     & Prev                   \\
+	\textbf{L c}       & Close Buf, Tab         \\
 	> b                & Move Right             \\
 	< b                & Move Left              \\
 	L b b              & To tab with IP         \\
@@ -91,14 +91,8 @@
 \begin{tabular}{lr}
 	?            & Help              \\
 	\textbf{L e} & Toggle            \\
-	L o          & Focus             \\
-	H            & Show hidden files \\
-\end{tabular}
-
-\section{Dashboard}
-
-\begin{tabular}{lr}
-	L h & Home \\
+	\textbf{L o} & Focus             \\
+	\textbf{H}   & Show hidden files \\
 \end{tabular}
 
 \section{Session}
@@ -197,6 +191,12 @@
 	L g t & Git Status     \\
 	L l s & LSP Symbols    \\
 	L l G & LSP WSymbols   \\
+\end{tabular}
+
+\section{Dashboard}
+
+\begin{tabular}{lr}
+	L h & Home \\
 \end{tabular}
 
 \section{Tips \& Tricks}
