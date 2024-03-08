@@ -5,7 +5,7 @@
 
 % compile as 'pdftex vimqrc.tex'
 
- \pdfoutput=1
+\pdfoutput=1
 \pdfpageheight=21cm
 \pdfpagewidth=29.7cm
 
@@ -16,14 +16,14 @@
 \hbadness=10000
 
 \pdfinfo {
-/Title    (Vim Quick Reference Card)
-/Author   (Michael Goerz)
-/Subject  (Vim Text Editor)
-/Keywords (Movements, Insertion, Replace and Deletion, Insert Mode, Search and
-Substitution, Formatting, Filtering, Visual Mode, Undoing and Repeating,
-Registers, Copying, Patterns, Spell Checking, Marks, Motions and Tags, Multiple
-Files and Buffers, Scrolling, Multi-Windowing, Ex Commands and Ranges,
-Completion, Folding, Compiling)
+	/Title    (Vim Quick Reference Card)
+	/Author   (Michael Goerz)
+	/Subject  (Vim Text Editor)
+	/Keywords (Movements, Insertion, Replace and Deletion, Insert Mode, Search and
+	Substitution, Formatting, Filtering, Visual Mode, Undoing and Repeating,
+	Registers, Copying, Patterns, Spell Checking, Marks, Motions and Tags, Multiple
+	Files and Buffers, Scrolling, Multi-Windowing, Ex Commands and Ranges,
+	Completion, Folding, Compiling)
 }
 
 % Font definitions
@@ -66,23 +66,23 @@ Completion, Folding, Compiling)
 \newbox\leftcolumn
 \newbox\midcolumn
 \output={
-  \if L\lr
-    \global\setbox\leftcolumn=\columnbox
-    \global\let\lr=M
-  \else\if M\lr
-    \global\setbox\midcolumn=\columnbox
-    \global\let\lr=R
-  \else
-    \tripleformat
-    \global\let\lr=L
-  \fi\fi
-  \ifnum\outputpenalty>-20000
-  \else
-    \dosupereject
-  \fi}
+\if L\lr
+	\global\setbox\leftcolumn=\columnbox
+	\global\let\lr=M
+\else\if M\lr
+		\global\setbox\midcolumn=\columnbox
+		\global\let\lr=R
+	\else
+		\tripleformat
+		\global\let\lr=L
+	\fi\fi
+\ifnum\outputpenalty>-20000
+\else
+	\dosupereject
+\fi}
 \def\tripleformat{
-  \shipout\vbox{\fullline{\box\leftcolumn\hfil\box\midcolumn\hfil\columnbox}}
-  \advancepageno}
+	\shipout\vbox{\fullline{\box\leftcolumn\hfil\box\midcolumn\hfil\columnbox}}
+	\advancepageno}
 \def\columnbox{\leftline{\pagebody}}
 
 % Card content
@@ -372,7 +372,7 @@ $m$ is movement; leave out for visual mode commands \\
 {\smallrm This card may be freely distributed under
 the terms of the GNU general public licence ---
 Copyright \copyright\ {\oldstyle 2010} by Michael Goerz.
-{\smalltt https://michaelgoerz.net}. Based on original by
+	{\smalltt https://michaelgoerz.net}. Based on original by
 Laurent Gr\'egoire  ({\smalltt http://tnerual.eriogerg.free.fr/})}
 % Ending
 \supereject
