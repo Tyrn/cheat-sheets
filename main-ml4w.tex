@@ -1,0 +1,89 @@
+\documentclass[
+  ,landscape
+  ,columns=4
+]{cheatsheet}
+
+% Make the tables black.
+\makeatletter \def\m@th{\mathsurround\z@\color{black}} \makeatother
+% Allow \color in tabular.
+\usepackage{array}
+
+\title{ML4W Mappings}
+\author{Glossary:}
+\date{
+  \textbf{U}--Super,\\
+  \textbf{S}--Shift; \textbf{C}--Ctrl; \textbf{M}--Meta,\\
+  \textbf{La}, \textbf{Ra}, \textbf{Ua}, \textbf{Da}--Arrows
+}
+
+\begin{document}
+\maketitle
+
+\section{Applications}
+
+\begin{tabular}{lr}
+  U-Ret & open terminal \\
+  U-b & open browser \\
+  U-e & open file manager \\
+  U-C-e & open emoji picker \\
+  U-C-c & open calculator \\
+\end{tabular}
+
+\section{Windows}
+
+\begin{tabular}{lr}
+  \textbf{U-q} & kill active window \\
+  U-f & active window to fullscreen \\
+  U-t & toggle into float \\
+  U-S-t & toggle all into float \\
+  U-j & toggle split \\
+  U-La, U-h & move focus left \\
+  U-Ra, U-l & move focus right \\
+  U-Ua & move focus up \\
+  U-Da & move focus down \\
+  U-S-Ra & increase width \\
+  U-S-La & reduce width \\
+  U-S-Da & increase height \\
+  U-S-Ua & reduce height \\
+  U-k & swap split \\
+  \textbf{U-g} & toggle \textbf{groups} \\
+  U-C-h & move left inside \textbf{group} \\
+  U-C-l & move right inside \textbf{group} \\
+\end{tabular}
+
+\section{Actions}
+
+\begin{tabular}{lr}
+  U-S-a & toggle animations \\
+  \textbf{U-S-s}, U-Prn & take a screenshot \\
+  \textbf{U-C-q} & shutdown/logout \\
+  U-S-w & change the wallpaper \\
+  U-C-w & open wallpaper selector \\
+  \textbf{U-C-Ret} & open app launcher \\
+  U-C-k & show key bindings \\
+  U-S-b & reload waybar \\
+  U-C-b & toggle waybar \\
+  U-S-r & reload hyprland config \\
+  U-v & clipboard manager \\
+  U-C-t & waybar theme switcher \\
+  U-C-s & ml4w dotfile settings \\
+  U-S-a & toggle screen shader \\
+
+\end{tabular}
+
+\section{Workspaces}
+
+\begin{tabular}{lr}
+  U-[1-9] & open workspace [1-9] \\
+  U-0 & open workspace 10 \\
+  U-S-[1-9] & move window to [1-9] \\
+  U-S-0 & move window to 10 \\
+  U-Tab & open next workspace \\
+  U-S-Tab & open prev workspace \\
+  U-C-[1-9] & move all windows to [1-9] \\
+  U-C-0 & move all windows to 10 \\
+  U-C-Da & open next empty workspace \\
+\end{tabular}
+
+\end{document}
+
